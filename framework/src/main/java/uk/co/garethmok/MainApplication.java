@@ -4,7 +4,6 @@ import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import uk.co.garethmok.health.DummyHealthCheck;
-import uk.co.garethmok.resources.RootResource;
 
 public class MainApplication extends Application<ApplicationConfiguration> {
 

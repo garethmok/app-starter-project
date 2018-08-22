@@ -1,6 +1,7 @@
-package uk.co.garethmok.resources;
+package uk.co.garethmok;
 
 import org.junit.Test;
+import uk.co.garethmok.RootResource;
 
 import javax.ws.rs.core.Response;
 

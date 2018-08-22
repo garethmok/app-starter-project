@@ -1,4 +1,4 @@
-package uk.co.garethmok.resources;
+package uk.co.garethmok;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
