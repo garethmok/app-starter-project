@@ -1,4 +1,4 @@
-package pom;
+package uk.co.garethmok;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
