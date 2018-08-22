@@ -11,3 +11,4 @@ logging:
       archivedLogFilenamePattern: ./logs/application-%d{yyyy-MM-dd}.log.gz
       archivedFileCount: 7
       timeZone: UTC
+#      maxFileSize: 10MB
