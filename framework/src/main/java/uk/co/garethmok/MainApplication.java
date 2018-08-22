@@ -3,6 +3,7 @@ package uk.co.garethmok;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import uk.co.garethmok.health.DummyHealthCheck;
 import uk.co.garethmok.resources.RootResource;
 
 public class MainApplication extends Application<ApplicationConfiguration> {
@@ -23,6 +24,8 @@ public class MainApplication extends Application<ApplicationConfiguration> {
     @Override
     public void run(final ApplicationConfiguration configuration,
                     final Environment environment) {
+        environment.healthChecks().register("Dummy Health Check", new DummyHealthCheck());
+
         environment.jersey().register(new RootResource(configuration.appName()));
     }
 
