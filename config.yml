@@ -3,3 +3,11 @@ logging:
   level: INFO
   loggers:
     uk.co.garethmok: DEBUG
+  appenders:
+    - type: console
+    - type: file
+      threshold: INFO
+      currentLogFilename: ./logs/application.log
+      archivedLogFilenamePattern: ./logs/application-%d{yyyy-MM-dd}.log.gz
+      archivedFileCount: 7
+      timeZone: UTC
