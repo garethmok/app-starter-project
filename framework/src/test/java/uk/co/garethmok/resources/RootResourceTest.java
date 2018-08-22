@@ -13,6 +13,7 @@ public class RootResourceTest {
         final RootResource testSubject = new RootResource("turnip");
         final Response response = testSubject.hello();
 
+        assertThat(response.getStatus()).isEqualTo(200);
         assertThat(response.getEntity()).isEqualTo("Hello, this is turnip");
     }
 
