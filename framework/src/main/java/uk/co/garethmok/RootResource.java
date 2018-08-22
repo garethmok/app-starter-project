@@ -17,7 +17,7 @@ public class RootResource {
 
     private String appName;
 
-    public RootResource(final String appName) {
+    RootResource(final String appName) {
         this.appName = appName;
     }
 
