@@ -3,6 +3,7 @@ package uk.co.garethmok;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import uk.co.garethmok.resources.RootResource;
 
 public class MainApplication extends Application<ApplicationConfiguration> {
 
@@ -17,13 +18,12 @@ public class MainApplication extends Application<ApplicationConfiguration> {
 
     @Override
     public void initialize(final Bootstrap<ApplicationConfiguration> bootstrap) {
-        // TODO: application initialization
     }
 
     @Override
     public void run(final ApplicationConfiguration configuration,
                     final Environment environment) {
-        // TODO: implement application
+        environment.jersey().register(new RootResource(configuration.appName()));
     }
 
 }
