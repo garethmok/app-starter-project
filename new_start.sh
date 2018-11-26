@@ -11,7 +11,7 @@ cp -r ./app-starter-project ./$projectName
 # 2. Prep for creating remote git repo
 echo "[INFO] - Performing some clean up."
 rm ./$projectName/$0
-rm -rf ./.git
+rm -rf ./$projectName/.git
 
 # Real meat of the work here
 cd $projectName
@@ -28,11 +28,13 @@ sed -i $sedInstruction ./framework/src/main/resources/banner.txt
 echo "# $projectName" > README.md
 
 # Local part done
+echo ""
 echo "[INFO] Finished generating project: '$projectName'."
 
 # Decide whether to create repo on GitHub
 while true; do
   read -p "Do you want to create this repo on GitHub [y/n]? " yn
+  echo ""
   
   case $yn in
     [Yy])
@@ -46,15 +48,16 @@ while true; do
       else
         echo "[INFO] Configuring git repo..."
         git init
-        git remote rm origin
         git remote add origin git@github.com:garethmok/$projectName.git
 
         echo "[INFO] Finished configuring git. Making first push to '$projectName'"
+        echo ""
         git add --all
         git commit -m"Creates the new project. Initial commit."
         git push -u origin master
       fi
-  
+
+      echo ""
       echo "[INFO] ====================================================================="
       echo "[INFO] Remote repo created: https://github.com/garethmok/$projectName"
       echo "[INFO] '$projectName' successfully generated."
