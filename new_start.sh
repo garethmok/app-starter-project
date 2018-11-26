@@ -33,8 +33,9 @@ while true; do
   
   case $yn in
     [Yy])
+      echo "Requesting creation of remote repo..."
       curl -u 'garethmok' https://api.github.com/user/repos -d "{\"name\":\"$projectName\"}"
-
+ 
       if [ $? -eq 0 ]
       then
         rm -rf ./.git
@@ -43,6 +44,9 @@ while true; do
         git add --all
         git commit -m"Creates the new project. Initial commit."
         git push -u origin master
+      else
+	echo "Request to create remote repo failed. Exiting..."
+	break
       fi
   
       echo "Remote repo created: https://github.com/garethmok/$projectName"
