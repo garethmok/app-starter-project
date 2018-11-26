@@ -13,7 +13,7 @@ public class MainApplication extends Application<ApplicationConfiguration> {
 
     @Override
     public String getName() {
-        return "lisjf";
+        return "app-starter-project";
     }
 
     @Override

@@ -6,7 +6,7 @@
 
   <parent>
     <groupId>uk.co.garethmok</groupId>
-    <artifactId>lisjf</artifactId>
+    <artifactId>app-starter-project</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
