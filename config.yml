@@ -1,4 +1,4 @@
-appName: app-starter-project
+appName: test-thingy
 logging:
   level: INFO
   loggers:
