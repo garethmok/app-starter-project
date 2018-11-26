@@ -22,7 +22,7 @@ sed -i $sedInstruction ./framework/src/main/java/uk/co/garethmok/MainApplication
 sed -i $sedInstruction ./framework/src/main/resources/banner.txt
 
 # Replace README content with just project name
-echo $projectName > README.md
+echo "#$projectName" > README.md
 
 # Local part done
 echo "Finished generating project: '$projectName'."
