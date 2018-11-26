@@ -1,4 +1,4 @@
-# Start fresh
+# app-starter-project
 
 # How to use
 
