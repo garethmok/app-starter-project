@@ -42,6 +42,7 @@ while true; do
         continue
       else
         git init
+        git remote rm origin
         git remote add origin git@github.com:garethmok/$projectName.git
         git add --all
         git commit -m"Creates the new project. Initial commit."
