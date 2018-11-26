@@ -13,7 +13,7 @@ public class MainApplication extends Application<ApplicationConfiguration> {
 
     @Override
     public String getName() {
-        return "app-starter-project";
+        return "mmmvm";
     }
 
     @Override

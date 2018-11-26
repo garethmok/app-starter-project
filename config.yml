@@ -1,4 +1,4 @@
-appName: app-starter-project
+appName: mmmvm
 logging:
   level: INFO
   loggers:
