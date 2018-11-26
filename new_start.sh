@@ -2,7 +2,7 @@
 
 read -p "Enter the new project's name: " projectName
 
-cd ~/workspace
+cd ..
 cp -r ./app-starter-project ./$projectName
 
 # Clean up the new project
