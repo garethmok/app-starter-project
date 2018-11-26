@@ -46,6 +46,7 @@ while true; do
       fi
   
       echo "Remote repo created: https://github.com/garethmok/$projectName"
+      break
       ;;
     [Nn])
       echo "Remote repo not created."
