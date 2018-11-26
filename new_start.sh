@@ -38,7 +38,6 @@ while true; do
  
       if [ $? -eq 0 ]
       then
-        rm -rf ./.git
         git init
         git remote add origin git@github.com:garethmok/$projectName.git
         git add --all
