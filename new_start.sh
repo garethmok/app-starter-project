@@ -39,7 +39,7 @@ while true; do
       then
         rm -rf ./.git
         git init
-        git remote add origin https://github.com/garethmok/$projectName.git
+        git remote add origin git@github.com:garethmok/$projectName.git
         git add --all
         git commit -m"Creates the new project. Initial commit."
         git push -u origin master
