@@ -1,1 +1,3 @@
-#test-test-test
+# Start fresh
+
+Multi-module dropwizard skeleton application.

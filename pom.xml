@@ -10,12 +10,12 @@
     </prerequisites>
 
     <groupId>uk.co.garethmok</groupId>
-    <artifactId>test-test-test</artifactId>
+    <artifactId>app-starter-project</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
-    <name>test-test-test</name>
+    <name>app-starter-project</name>
 
     <modules>
         <module>framework</module>
