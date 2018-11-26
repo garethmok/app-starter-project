@@ -34,18 +34,18 @@ while true; do
   case $yn in
     [Yy])
       echo "Requesting creation of remote repo..."
-      curl -u 'garethmok' https://api.github.com/user/repos -d "{\"name\":\"$projectName\"}"
+      repoCreatedResult=$(curl -u 'garethmok' https://api.github.com/user/repos -d "{\"name\":\"$projectName\"}")
  
-      if [ $? -eq 0 ]
+      if [[ $repoCreatedResult == *"Bad credentials"* ]]
       then
+        echo "Failed to authenticate. Try again..." >&2
+        continue
+      else
         git init
         git remote add origin git@github.com:garethmok/$projectName.git
         git add --all
         git commit -m"Creates the new project. Initial commit."
         git push -u origin master
-      else
-	echo "Request to create remote repo failed. Exiting..."
-	break
       fi
   
       echo "Remote repo created: https://github.com/garethmok/$projectName"
