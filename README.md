@@ -1,5 +1,15 @@
 # Start fresh
 
+# How to use
+
+Clone this project, and from the project directory run:
+
+`fresh_start.sh`
+
+You will be given the option to create a remote repo. Choosing not to will still create the project locally and is therefore useful for spikes.
+
+# About this project
+
 Multi-module dropwizard skeleton application.
 
 This project has only been validated for compatibility up to jdk8u191.
