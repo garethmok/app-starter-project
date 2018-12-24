@@ -8,9 +8,11 @@ cp -r ./app-starter-project ./$projectName
 
 # Clean up the new project
 # 1. Remove the starter script from the new project
-# 2. Prep for creating remote git repo
+# 2. Remove .idea if it exists
+# 3. Prep for creating remote git repo
 echo "[INFO] - Performing some clean up."
 rm ./$projectName/$0
+rm -rf ./$projectName/.idea
 rm -rf ./$projectName/.git
 
 # Real meat of the work here
