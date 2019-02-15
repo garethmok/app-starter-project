@@ -22,6 +22,7 @@ echo "[INFO] - Configuring '$projectName' contents."
 sedInstruction=s/app-starter-project/$projectName/g
 sed -i $sedInstruction pom.xml
 sed -i $sedInstruction config.yml
+sed -i $sedInstruction ./application/pom.xml
 sed -i $sedInstruction ./framework/pom.xml
 sed -i $sedInstruction ./framework/src/main/java/uk/co/garethmok/MainApplication.java
 sed -i $sedInstruction ./framework/src/main/resources/banner.txt
@@ -34,13 +35,12 @@ echo ""
 echo "[INFO] Finished generating project: '$projectName'."
 
 # Decide whether to create repo on GitHub
+read -p "Do you want to create this repo on GitHub [y/n]? " yn
+
+echo "[INFO] Requesting creation of remote repo..."
 while true; do
-  read -p "Do you want to create this repo on GitHub [y/n]? " yn
-  echo ""
-  
   case $yn in
     [Yy])
-      echo "[INFO] Requesting creation of remote repo..."
       repoCreatedResult=$(curl -u 'garethmok' https://api.github.com/user/repos -d "{\"name\":\"$projectName\"}")
  
       if [[ $repoCreatedResult == *"Bad credentials"* ]]
