@@ -3,6 +3,9 @@ package uk.co.garethmok;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import uk.co.garethmok.billmanager.BillManagerController;
+import uk.co.garethmok.billmanager.BillManagerService;
+import uk.co.garethmok.documents.DefaultDocumentsApiClient;
 import uk.co.garethmok.health.DummyHealthCheck;
 
 public class MainApplication extends Application<ApplicationConfiguration> {
@@ -26,6 +29,7 @@ public class MainApplication extends Application<ApplicationConfiguration> {
         environment.healthChecks().register("Dummy Health Check", new DummyHealthCheck());
 
         environment.jersey().register(new RootResource(configuration.appName()));
+        environment.jersey().register(new BillManagerController(new BillManagerService(new DefaultDocumentsApiClient())));
     }
 
 }
